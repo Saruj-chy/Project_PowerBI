@@ -80,7 +80,7 @@ ORDER BY p.ProductID
         ORDER BY 
             TotalSales DESC
         LIMIT 10;
-<h1> Download </h1> <a href ="https://github.com/Saruj-chy/Project_PowerBI/blob/main/Excel%20Files/sales_table.xlsx" >Excel Files </a>
+<h1> Download <a href ="https://github.com/Saruj-chy/Project_PowerBI/blob/main/Excel%20Files/sales_table.xlsx" >Excel Files </a> </h1>
 
 ## Using a Microsoft PowerBI tool, create a dashboard that displays:
 <p>

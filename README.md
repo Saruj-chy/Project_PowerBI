@@ -3,19 +3,21 @@ There are provided three tables: Products, Sales, and Customers. These tables in
 
 # Table Schema
 
+### Customers Table
 CREATE TABLE `customers` (
   `CustomerID` int(11) NOT NULL,
   `CustomerName` varchar(255) DEFAULT NULL,
   `ContactNumber` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+### Products Table
 CREATE TABLE `products` (
   `ProductID` int(11) NOT NULL,
   `ProductName` varchar(255) DEFAULT NULL,
   `Price` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
+### Sales Table
 CREATE TABLE `sales` (
   `SaleID` int(11) NOT NULL,
   `ProductID` int(11) DEFAULT NULL,

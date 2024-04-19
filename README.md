@@ -27,7 +27,7 @@ CREATE TABLE `sales` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 <p>
-  <img src="https://github.com/Saruj-chy/Project_PowerBI/blob/main/Image/database_ss.PNG"   width="200" title="Database Schema">
+  <img src="https://github.com/Saruj-chy/Project_PowerBI/blob/main/Image/database_ss.PNG"   width="600" title="Database Schema">
   </p>
 
 # ETL Process
@@ -84,7 +84,7 @@ ORDER BY p.ProductID
 
 ## Using a Microsoft PowerBI tool, create a dashboard that displays:
 <p>
-  <img src="https://github.com/Saruj-chy/Project_PowerBI/blob/main/Image/Dashboard_Report_Created_by_PowerBI.PNG"   width="500" title="Dashboard_Report_Created_by_PowerBI ">
+  <img src="https://github.com/Saruj-chy/Project_PowerBI/blob/main/Image/Dashboard_Report_Created_by_PowerBI.PNG"   width="600" title="Dashboard_Report_Created_by_PowerBI ">
   </p>
 
 

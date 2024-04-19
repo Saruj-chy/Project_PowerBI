@@ -4,27 +4,27 @@ There are provided three tables: Products, Sales, and Customers. These tables in
 # Table Schema
 
 ### Customers Table
-CREATE TABLE `customers` (
-  `CustomerID` int(11) NOT NULL,
-  `CustomerName` varchar(255) DEFAULT NULL,
-  `ContactNumber` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        CREATE TABLE `customers` (
+        `CustomerID` int(11) NOT NULL,
+        `CustomerName` varchar(255) DEFAULT NULL,
+        `ContactNumber` varchar(255) DEFAULT NULL
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ### Products Table
-CREATE TABLE `products` (
-  `ProductID` int(11) NOT NULL,
-  `ProductName` varchar(255) DEFAULT NULL,
-  `Price` decimal(10,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        CREATE TABLE `products` (
+        `ProductID` int(11) NOT NULL,
+        `ProductName` varchar(255) DEFAULT NULL,
+        `Price` decimal(10,2) DEFAULT NULL
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ### Sales Table
-CREATE TABLE `sales` (
-  `SaleID` int(11) NOT NULL,
-  `ProductID` int(11) DEFAULT NULL,
-  `CustomerID` int(11) DEFAULT NULL,
-  `Quantity` int(11) DEFAULT NULL,
-  `SaleDate` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        CREATE TABLE `sales` (
+        `SaleID` int(11) NOT NULL,
+        `ProductID` int(11) DEFAULT NULL,
+        `CustomerID` int(11) DEFAULT NULL,
+        `Quantity` int(11) DEFAULT NULL,
+        `SaleDate` date DEFAULT NULL
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 <p>
   <img src="https://github.com/Saruj-chy/Project_PowerBI/blob/main/Image/database_ss.PNG"   width="600" title="Database Schema">
@@ -80,7 +80,7 @@ ORDER BY p.ProductID
         ORDER BY 
             TotalSales DESC
         LIMIT 10;
-<a href ="https://github.com/Saruj-chy/Project_PowerBI/blob/main/Excel%20Files/sales_table.xlsx" >Excel Files </a>
+<h1> Download </h1> <a href ="https://github.com/Saruj-chy/Project_PowerBI/blob/main/Excel%20Files/sales_table.xlsx" >Excel Files </a>
 
 ## Using a Microsoft PowerBI tool, create a dashboard that displays:
 <p>

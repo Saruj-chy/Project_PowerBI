@@ -1,2 +1,25 @@
 # Project_PowerBI
-This project is made on microsoft power bi platform.
+There are provided three tables: Products, Sales, and Customers. These tables integrate into a SQL Server environment, perform data transformations, optimize the database, and generate a BI report.
+
+# Table Schema
+
+CREATE TABLE `customers` (
+  `CustomerID` int(11) NOT NULL,
+  `CustomerName` varchar(255) DEFAULT NULL,
+  `ContactNumber` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `products` (
+  `ProductID` int(11) NOT NULL,
+  `ProductName` varchar(255) DEFAULT NULL,
+  `Price` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `sales` (
+  `SaleID` int(11) NOT NULL,
+  `ProductID` int(11) DEFAULT NULL,
+  `CustomerID` int(11) DEFAULT NULL,
+  `Quantity` int(11) DEFAULT NULL,
+  `SaleDate` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

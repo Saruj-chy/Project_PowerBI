@@ -1,0 +1,48 @@
+1. Write an SQL query to find the total revenue per product for the last quarter
+query:
+SELECT p.ProductID, p.ProductName, SUM(p.Price*s.Quantity) AS TotalRevenue
+FROM products AS p INNER JOIN sales AS s
+ON p.ProductID = s.ProductID
+WHERE QUARTER(s.SaleDate) = QUARTER(CURDATE()) - 1
+GROUP BY p.ProductID
+ORDER BY p.ProductID
+
+2. Total sales by product category
+query:
+SELECT p.ProductID, p.ProductName, p.Price, SUM(s.Quantity) AS Sales
+FROM products AS p INNER JOIN sales AS s
+ON p.ProductID = s.ProductID
+GROUP BY p.ProductName
+ORDER BY p.ProductID
+
+3.Trends of sales over the last year
+query:
+SELECT 
+    YEAR(s.SaleDate) AS Year,
+    MONTH(s.SaleDate) AS Month,
+    SUM(s.Quantity*p.Price) AS TotalRevenue
+FROM products AS p 
+INNER JOIN sales AS s
+ON p.ProductID = s.ProductID
+WHERE 
+    s.SaleDate >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR)
+GROUP BY 
+    YEAR(s.SaleDate), MONTH(s.SaleDate)
+ORDER BY 
+    YEAR(s.SaleDate), MONTH(s.SaleDate);
+
+
+4. Top 10 customers by sales volume
+query:
+SELECT 
+    c.CustomerName,
+    SUM(s.Quantity) AS TotalSales
+FROM 
+    sales s
+JOIN 
+    customers c ON s.CustomerID = c.CustomerID
+GROUP BY 
+    s.CustomerID, c.CustomerName
+ORDER BY 
+    TotalSales DESC
+LIMIT 10;
